@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body.dark-mode {
+    background: linear-gradient(-45deg, #141e30, #243b55);
+}
+
+.todo-container {
+    background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .todo-container {
+    background: #2c3e50;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: white;
+}
+
+.todo-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-left:100px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align:center;
+}
+
+body.dark-mode h1 {
+    color: #ecf0f1;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#new-task-input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#new-task-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+body.dark-mode #new-task-input {
+    background: #34495e;
+    color: white;
+    border-color: #16a085;
+}
+
+#add-task-button {
+    padding: 10px;
+    width: 50px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#add-task-button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode #add-task-button {
+    background-color: #16a085;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.task:hover {
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .task {
+    border-color: #19212E;
+}
+
+body.dark-mode .task:hover {
+    background-color: #1C1C21;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+body.dark-mode .task.completed {
+    color: #7f8c8d;
+}
+
+.task-priority {
+    color: red;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons button {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.task-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons .edit-button {
+    color: #007bff;
+}
+
+.task-buttons .delete-button {
+    color: #dc3545;
+}
+
+.task-buttons .complete-button {
+    color: #28a745;
+}
+
+body.dark-mode .task-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+body.dark-mode #theme-toggle i {
+    color: #f39c12;
+}
